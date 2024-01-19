@@ -1,0 +1,58 @@
+{% load customFilters %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h2>Built-In Filetrs</h2>
+
+        {{data}}
+        <br>
+        {{data|lower}}
+        <br>
+        {{data|upper}}
+        <br>
+        {{data|title}}
+        <br>
+        {{data|capfirst}}
+        <br>
+        {{data|length}}
+        <br>
+        {{data|truncatechars:'4'}}
+        <br>
+        {{data|slice:'4'}}
+        <br>
+        {{data|truncatewords:'1'}}
+        <br>
+        <br>
+        {{dt}}
+        <br>
+        {{dt|date:'D, d M, Y, s'}}
+        <br>
+        <h3>I have {{c}} cat{{c|pluralize}}</h3>
+        <h3>I have {{d}} cat{{d|pluralize}}</h3>
+        <h3>I have {{d}} cat{{d|pluralize}}</h3>
+        <br>
+
+        <h2>User Defined Filters</h2>
+
+        {{data|swap}}
+        <br>
+        {{data|remove:'E'}}
+        <br>
+        h:{{data|counting:'h'}}
+        <br>
+        L:{{data|counting:'L'}}
+
+
+
+    </center>
+</body>
+
+</html>
